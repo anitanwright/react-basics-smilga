@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+// stateless functional component
 function Greeting() {
-    return <h4>This is Anita and this is my first component</h4>;
-    
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  );
 }
+// Nested Components -------------------------------
 
-// function passing in two things- what is being rendered and where it is being rendered
+const Person = ()=> <h4>Hello my name is anita </h4>;
+const Message = () => <p>This is the message I'd like you to see</p>
+
 
 ReactDom.render(<Greeting />, document.getElementById('root'));
