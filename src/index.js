@@ -14,6 +14,7 @@ function BookList() {
       <Book />
       <Book />
       <Book />
+      <Book />
     </section>
   );
 };
@@ -39,10 +40,10 @@ const Image = () => (
   />
 );
 
-// Title Component
+// Title Component (using inline styling which takes precedence over style sheet styling)
 const Title = () => (
-  <div>
-    <h2>Atomic Habits</h2>
+  <div> 
+    <h2 style={{ fontSize: '2rem', marginTop: '0.25rem', textAlign: 'center' }}>Atomic Habits</h2>
     <h4>And how to achieve them</h4>
   </div>
 );
