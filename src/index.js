@@ -15,6 +15,9 @@ function BookList() {
 const Book = () => {
   const title = 'Atomic Habits';
   const author = 'James Clear';
+  const authorPage = (
+    <a href='https://www.amazon.com/James-Clear/e/B07DJTJC3X/ref=dp_byline_cont_pop_book_1'>Click here to find out more about the author!</a>
+  );
   return (
     <article className='book'>
       <img
@@ -22,7 +25,8 @@ const Book = () => {
         alt='Atomic Habits Book'
       />
       <h1>{title.toUpperCase()}</h1>
-      {author.toUpperCase()}
+      <div>{author}</div>
+      <p>{authorPage}</p>
     </article>
   );
 };
