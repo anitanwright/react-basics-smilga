@@ -12,8 +12,9 @@ body {
   color: #222;
 }
 
-h2 {
+h1 {
   color: hotpink;
+  margin-top: 10px;
 }
 
 .booklist {
@@ -39,4 +40,11 @@ h2 {
 
 .book h2{
  margin-top: 0.5rem;
+}
+
+div {
+  text-align: center;
+}
+p {
+  margin-top: 35px;
 }
