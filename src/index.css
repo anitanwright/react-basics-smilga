@@ -14,7 +14,8 @@ body {
 
 h1 {
   color: hotpink;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .booklist {
@@ -33,18 +34,29 @@ h1 {
 }
 
 .book {
- background: #fff;
- border-radius: 1rem;
- padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
 }
 
-.book h2{
- margin-top: 0.5rem;
+.book h2 {
+  margin-top: 0.5rem;
 }
 
 div {
   text-align: center;
+  margin-top: 10px;
+  font-weight:bold;
+
 }
 p {
-  margin-top: 35px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  max-width: fit-content;
+  max-height: 150px;
+
 }
