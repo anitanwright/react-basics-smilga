@@ -70,7 +70,9 @@ function BookList() {
         title={firstBook.title}
         author={firstBook.author}
         authorPage={firstBook.authorPage}
-      />
+      >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas expedita optio.</p>
+      </Book>
 
       <BookTwo
         img={secondBook.img}
@@ -98,7 +100,9 @@ function BookList() {
         title={fifthBook.title}
         author={fifthBook.author}
         authorPage={fifthBook.authorPage}
-      />
+      > 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </BookThree>
     </section>
   );
 }
@@ -111,6 +115,7 @@ const Book = (props) => {
       <img src={props.img} />
       <div>{props.author}</div>
       <p>{props.authorPage}</p>
+      <p>{props.children}</p>
     </article>
   );
 };
@@ -129,13 +134,14 @@ const BookTwo = (props) => {
 };
 
 // alternate way to use object destructuring used for fifthBook
-const BookThree = ({ title, img, author, authorPage }) => {
+const BookThree = ({ title, img, author, authorPage, children }) => {
   return (
     <article className='book'>
       <h1>{title.toUpperCase()}</h1>
       <img src={img} alt='' />
       <div>{author}</div>
       <p>{authorPage}</p>
+      {children}
     </article>
   );
 };
