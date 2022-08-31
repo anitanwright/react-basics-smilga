@@ -5,7 +5,7 @@ import ReactDom from 'react-dom';
 // css relative path file
 import './index.css';
 const books = [
-  {
+  { id: 1,
     img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL210_SR195,210_.jpg',
     title: 'Atomic Habits',
     author: 'James Clear',
@@ -16,7 +16,7 @@ const books = [
     ),
   },
 
-  {
+  { id: 2,
     img: 'https://images-na.ssl-images-amazon.com/images/I/51hb6+asUeL._SX321_BO1,204,203,200_.jpg',
     title: 'Unaccustomed Earth',
     author: 'Jhumpa Lahiri',
@@ -26,7 +26,7 @@ const books = [
       </a>
     ),
   },
-  {
+  { id: 3,
     img: 'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/41lkouDhm5L._SY354_BO1,204,203,200_.jpg',
     title: 'The Very Hungry Caterpillar',
     author: 'Eric Carle',
@@ -38,22 +38,19 @@ const books = [
   },
 ];
 // using .map to iterate over the array to access the Book obj
+
 function BookList() {
   return (
     <section className='booklist'>
-      {books.map((book) => {
-        return (
-          <Book book={book}>
-
-          </Book>
-        );
+      {books.map((book, index) => {
+        return <Book key={book.id} {...book}></Book>;
       })}
     </section>
   );
 }
 // using props destructuring to access and render the properties listed above
-const Book = (props) => {
-  const { img, title, author, authorPage } = props.book;
+const Book = ({img, title, author, authorPage}) => {
+  //const { img, title, author, authorPage } = props;
   return (
     <article className='book'>
       <h1>{title.toUpperCase()}</h1>
