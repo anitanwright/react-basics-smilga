@@ -51,13 +51,29 @@ function BookList() {
 }
 // using props destructuring to access and render the properties listed above
 const Book = ({img, title, author, authorPage}) => {
-  //const { img, title, author, authorPage } = props;
+  // attribute, evenHandler
+  // onClick, onMouseOver
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
+    alert('hello world');
+  };
+
+  const complexExample = (author) => {
+    console.log(author);
+
+  }
   return (
-    <article className='book'>
-      <h1>{title.toUpperCase()}</h1>
+    <article className='book' onMouseOver={()=>{
+      console.log(title);
+    }}>
+      <h1 onClick={()=> console.log(title)}>{title.toUpperCase()}</h1>
       <img src={img} />
       <div>{author}</div>
       <p>{authorPage}</p>
+      <button type='button' onClick={clickHandler}>reference example</button>
+      <button type='button' onClick={() => complexExample(author)}>
+      more complex example</button>
     </article>
   );
 };
