@@ -38,11 +38,12 @@ const books = [
   },
 ];
 // using .map to iterate over the array to access the Book obj
+//and the spread operator to spread out all the props in the book
 
 function BookList() {
   return (
     <section className='booklist'>
-      {books.map((book, index) => {
+      {books.map((book) => {
         return <Book key={book.id} {...book}></Book>;
       })}
     </section>
